@@ -1,0 +1,36 @@
+# 版本要求：
+# https://rasp.baidu.com/doc/install/panel.html
+# EMongoDB 版本大于等于 3.6
+# ElasticSearch 版本大于等于 5.6，小于 7.0 (ES 7.X 变化较大，暂无计划支持)
+
+version: '3.1'
+
+services:
+
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: zhima
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: zhima
+      ME_CONFIG_MONGODB_URL: mongodb://root:zhima@mongo:27017/
+
+  elastic:
+    image: elasticsearch:6.8.23
+    restart: always
+    ports:
+      - 9200:9200
+      - 9300:9300
+    environment:
+      discovery.type: single-node
