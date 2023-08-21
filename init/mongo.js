@@ -1,6 +1,5 @@
 db = db.getSiblingDB('openrasp')
 
-
 db.createUser({
     user: 'openrasp',
     pwd: 'zhimakaimen',
