@@ -1,6 +1,6 @@
 # 版本要求：
 # https://rasp.baidu.com/doc/install/panel.html
-# EMongoDB 版本大于等于 3.6
+# EMongoDB 版本大于等于 3.6（实测5.x认证失败）
 # ElasticSearch 版本大于等于 5.6，小于 7.0 (ES 7.X 变化较大，暂无计划支持)
 
 version: '3.1'
