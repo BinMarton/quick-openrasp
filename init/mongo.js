@@ -3,7 +3,7 @@ db = db.getSiblingDB('openrasp')
 
 db.createUser({
     user: 'openrasp',
-    pwd: 'openrasp',
+    pwd: 'zhimakaimen',
     roles: [
       {
         role: 'dbOwner',

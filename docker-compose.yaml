@@ -16,6 +16,8 @@ services:
       - 52102:9300
     environment:
       discovery.type: single-node
+    volumes:
+      - rasp-elastic:/usr/share/elasticsearch/data
 
   mongo:
     image: mongo:4.4.23
@@ -32,7 +34,7 @@ services:
     command: [--auth]
     volumes:
       - ./init/mongo.js:/docker-entrypoint-initdb.d/mongo-init.js
-      - ./volumes/mongo/data:/data/db
+      - rasp-mongo:/data/db
 
   mongo-express:
     image: mongo-express
@@ -43,4 +45,12 @@ services:
     environment:
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: zhimakaimen
-      ME_CONFIG_MONGODB_URL: mongodb://root:zhimakaimen@mongo:52103/
+      ME_CONFIG_MONGODB_URL: mongodb://root:zhimakaimen@mongo:27017/
+    depends_on:
+      - mongo
+
+volumes:
+  rasp-elastic:
+    driver: local
+  rasp-mongo:
+    driver: local
