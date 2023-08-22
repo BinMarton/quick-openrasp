@@ -17,7 +17,7 @@ sudo systemctl start docker
 sudo docker run hello-world
 
 # start rasp cloud services
-docker compose up -d
+docker compose -f cloud.yaml up -d
 
 # install & start rasp-cloud
 curl -o cloud.tar.gz https://packages.baidu.com/app/openrasp/release/1.3.7/rasp-cloud.tar.gz
