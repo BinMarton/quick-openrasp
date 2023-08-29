@@ -1,18 +1,15 @@
-# 测试环境：
-# https://rasp.baidu.com/doc/install/testcase.html
-
 version: '3.1'
 
 services:
-
   tomcat:
-    image: tomcat:8.5.92
     container_name: target-tomcat8.5
     restart: always
     ports:
       - 58080:8080
-    volumes:
-      - ./tomcat/webapps:/usr/local/tomcat/webapps
+    build:
+      context: .
+      dockerfile: target.dockerfile
+    image: tomcat:8.5.92-rasp
 
 volumes:
   rasp-target-tomcat8.5:
