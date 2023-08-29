@@ -1,7 +1,7 @@
 # quick-start
 Start OpenRASP Cloud（Server Side） with one bash scirpt in 5 mins.  
 Start OpenRASP Agent as attack target with one bash scirpt in 3 mins.  
-U can uquick build openrasp test and development enviroment.
+U can quick build openrasp test and development enviroment.
 
 ## 一句话脚本启动OpenRASP Cloud
 包含docker\dockercompose\es\mongo\mongoexpress
