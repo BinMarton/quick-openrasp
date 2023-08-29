@@ -15,7 +15,7 @@ localhost openrasp/admin@123
 ## 一句话脚本启动OpenRASP Agent
 包含tomcat\vul apps\rasp-agent
 ```
-# 必须修改target.yaml内[OpenRASP Cloud后台配置获取]
+# 必须修改target.dockerfile内[OpenRASP Cloud后台配置获取]
 sh target-start.sh
 ```
 启动后访问：
