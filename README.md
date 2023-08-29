@@ -5,10 +5,10 @@ U can use this for quick build test and development enviroment.
 
 ## 一句话脚本启动OpenRASP Cloud（包含docker\dockercompose\es\mongo\mongoexpress）。
 ```
-# 建议修改cloud.yaml内默认密码zhimakaimen
+# 建议修改cloud.yaml、init/app.conf内默认密码zhimakaimen
 sh cloud-start.sh
 ```
-启动后访问localhost:8080 openrasp/admin@123  
+启动后访问localhost openrasp/admin@123  
 
 ## 一句话脚本启动Apache Tomcat with OpenRASP Agent。
 ```
