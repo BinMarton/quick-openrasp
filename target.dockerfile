@@ -20,4 +20,4 @@ RUN tar -xzvf rasp-java.tar.gz \
     && rm -rf rasp-java.tar.gz \
     && mv rasp-2023-03-31 rasp \
     && cd rasp \
-    && java -jar RaspInstall.jar -install /usr/local/tomcat -backendurl http://yuruo.cn -appsecret r1POmwA6eDVrZfVw5lBbvdYrFreGgoUyCEjSjpdBoBF -appid a7de7600eea4a88b96dfbcfa88ac961018fa49ff
+    && java -jar RaspInstall.jar -install /usr/local/tomcat -backendurl http://yuruo.cn -appsecret [OpenRASP Cloud后台配置获取] -appid [OpenRASP Cloud后台配置获取]
